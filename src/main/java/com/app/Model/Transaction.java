@@ -1,12 +1,15 @@
-package com.app.Transaction;
+package com.app.Model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
-import com.app.Account.Account;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="Transaction")
@@ -16,6 +19,9 @@ public class Transaction {
 	@Column(name="tx_id")
 	@GeneratedValue
 	private long tx_id;
+	
+	@ManyToOne(fetch=FetchType.EAGER,cascade=CascadeType.ALL)
+	@JoinColumn(name="accound_id")
 	private Account accound_id;
 	private Account balance;
 	private Account description;

@@ -1,4 +1,4 @@
-package com.app.Customer;
+package com.app.Model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
