@@ -1,10 +1,11 @@
-package com.app.Service;
+package com.app.Dao;
 
 import java.util.List;
 
 import com.app.Model.Account;
 
-public interface CustomerService {
+
+public interface CustomerDao {
 	
 	public void addAccount(Account account);
 
@@ -15,6 +16,7 @@ public interface CustomerService {
 	public List<Account> getAccounts();
 
 	public Account findStudent(Account account);
+	
 	
 
 }

@@ -23,20 +23,13 @@ public class Transaction implements Serializable{
 	//@JoinColumn(name="accound_id")
 	@Column
 	private Account accound_id;
-	public Transaction(long tx_id, Account accound_id, Account balance, Account description, double amount) {
-		super();
-		this.tx_id = tx_id;
-		this.accound_id = accound_id;
-		this.balance = balance;
-		this.description = description;
-		this.amount = amount;
-	}
 	@Column
 	private Account balance;
 	@Column
 	private Account description;
 	@Column
 	private double amount;
+	
 	
 	
 	public long getTx_id() {
@@ -74,5 +67,12 @@ public class Transaction implements Serializable{
 		this.amount = amount;
 	}
 	
-	
+	public Transaction(long tx_id, Account accound_id, Account balance, Account description, double amount) {
+		super();
+		this.tx_id = tx_id;
+		this.accound_id = accound_id;
+		this.balance = balance;
+		this.description = description;
+		this.amount = amount;
+	}
 }
