@@ -54,5 +54,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		 Account acc=(Account)hibernateTemplate.get(Account.class,account_Id);
 		return acc;
 	}
+
+	
 	
 }

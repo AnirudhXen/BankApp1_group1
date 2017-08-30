@@ -15,7 +15,7 @@ public interface CustomerDao {
 
 	public List<Account> getAccounts();
 
-	public Account findStudent(Account account);
+	public Account findStudent(Long account_Id);
 	
 	
 
