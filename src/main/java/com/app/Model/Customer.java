@@ -1,5 +1,7 @@
 package com.app.Model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,21 +9,46 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Customer")
-public class Customer {
+@Table(name="test222")
+public class Customer implements Serializable{
 	
 	@Id
-	@Column(name="customer_Id")
-	@GeneratedValue
 	private long customer_Id;
+	@Column
 	private String last_name;
+	public Customer() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Customer(long customer_Id, String last_name, String first_name, String middle_initial, String street,
+			String city, String state, String zip, String phone, String email) {
+		super();
+		this.customer_Id = customer_Id;
+		this.last_name = last_name;
+		this.first_name = first_name;
+		this.middle_initial = middle_initial;
+		this.street = street;
+		this.city = city;
+		this.state = state;
+		this.zip = zip;
+		this.phone = phone;
+		this.email = email;
+	}
+	@Column
 	private String first_name;
+	@Column
 	private String middle_initial;
+	@Column
 	private String street;
+	@Column
 	private String city;
+	@Column
 	private String state;
+	@Column
 	private String zip;
+	@Column
 	private String phone;
+	@Column
 	private String email;
 	public long getCustomer_Id() {
 		return customer_Id;

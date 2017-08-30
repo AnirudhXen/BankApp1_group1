@@ -1,5 +1,7 @@
 package com.app.Model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,18 +9,37 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Account")
-public class Account {
+@Table(name="test111")
+public class Account implements Serializable{
 	
 	@Id
-	@Column(name="account_Id")
-	@GeneratedValue
 	private long account_Id;
+	public Account(long account_Id, String actType, String description, double balance, double credit_line,
+			double begin_balance, double begin_balance_timestamp) {
+		super();
+		this.account_Id = account_Id;
+		this.actType = actType;
+		this.description = description;
+		this.balance = balance;
+		this.credit_line = credit_line;
+		this.begin_balance = begin_balance;
+		this.begin_balance_timestamp = begin_balance_timestamp;
+	}
+	public Account() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Column
 	private String actType;
+	@Column
 	private String description;
+	@Column
 	private double balance;
+	@Column
 	private double credit_line;
+	@Column
 	private double begin_balance;
+	@Column
 	private double begin_balance_timestamp; 
 	
 	public long getAccount_Id() {

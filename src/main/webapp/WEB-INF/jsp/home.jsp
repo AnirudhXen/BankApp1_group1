@@ -8,5 +8,10 @@
 </head>
 <body>
 
+<form action="">
+<input type="text" value="">
+<input type="password" value="">
+</form>
+
 </body>
 </html>
